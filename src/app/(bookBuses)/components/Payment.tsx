@@ -83,7 +83,7 @@ const Payment : React.FC<any>= ({sleeperSeats , seatingSeats , setDoPayment , ro
     setPhoneNo( users[ind].phone) ; 
   }
   function confirmTheBooking(){
-    setTimings()  ; 
+    // setTimings()  ; 
     let booking : any  = localStorage.getItem("booking")  ; 
     if( !booking ){
       booking  = []  ; 

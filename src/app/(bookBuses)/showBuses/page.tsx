@@ -3,7 +3,7 @@ import React , {useState , useEffect} from 'react'
 import style from "./css/page.module.css" ; 
 import BusCard from '../components/BusCard';
 import ErrorMessage from '@/app/(ticketOptions)/components/ErrorMessage';
-const page = () => {
+const MyPage = () => {
         const [fromCity , setFromCity ] = useState("") ; 
         const [toCity , setToCity ] = useState("") ; 
         const [journeyDate , setJourneyDate ] = useState("") ; 
@@ -126,4 +126,4 @@ const page = () => {
   )
 }
 
-export default page
+export default MyPage

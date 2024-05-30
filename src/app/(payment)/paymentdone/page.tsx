@@ -8,7 +8,7 @@ import emailjs from '@emailjs/browser';
 type UserDetails = {
     [key : string ] : any
   };
-const page = () => {
+const MyPage = () => {
     const [ userDetails , setUserDeatils] = useState<UserDetails>([]) ; 
     const [fromCity , setFromCity ] = useState("") ; 
     const [toCity , setToCity ] = useState("") ; 
@@ -16,10 +16,12 @@ const page = () => {
     const [toTime ,  setToTime] = useState("") ; 
     useEffect(()=>{
         if( !userDetails || userDetails.length=== 0 ) return ; 
-        if( userDetails[0].mailSent ) return ; 
+        if( userDetails[0].mailSent == true || userDetails[0].mailSent === 'true' ) return ; 
         sendMail() ; 
+        // setMailHasBeenSent() ; 
     } , [userDetails] )
     useEffect(()=>{
+
         let usersBooked : any  = localStorage.getItem("usersBooked") ; 
         usersBooked = JSON.parse( usersBooked) ; 
         setUserDeatils( usersBooked  ) ; 
@@ -39,7 +41,10 @@ const page = () => {
     }  , [] ) ; 
 
     function sendMail(){
-        return ; 
+      // return; 
+      // setMailHasBeenSent()  ; 
+      // return ; 
+        // return ; 
         // alert("Mail has been sent ! Successfully ")  ; 
         let mailmsg : any = `
                              Date : ${getProperDate( userDetails[0]?.date) }\n
@@ -75,7 +80,7 @@ const page = () => {
                              })
                              .then(
                                () => {
-                                alert("Messge sent successfully ") ; 
+                                alert("Ticket has been mailed successfully ") ; 
 
                                 setMailHasBeenSent() ; 
                                },
@@ -89,11 +94,32 @@ const page = () => {
     function setMailHasBeenSent(){
         let usersBooked : any  = localStorage.getItem("usersBooked") ; 
         usersBooked = JSON.parse( usersBooked) ; 
-        for( let entry of usersBooked ){
-            entry.mailSent = true ; 
+        for( let ind in usersBooked ){
+          let entry  : any = usersBooked[ind] ;
+          console.log( entry , entry.mailSent)
+          // if( !entry.mailSent ) entry.mailSent = String(t ; 
+
+            entry.mailSent = "true" ; 
+            usersBooked[ind] = {...entry }
         }
+
+        let booking : any = localStorage.getItem("booking") ; 
+        booking = JSON.parse( booking ) ; 
+        for(let ind in booking ){
+          let entry  : any = booking[ind] ;
+
+          if( entry.date === usersBooked[0].date && entry.phone === usersBooked[0].phone ){
+            // if( !entry.mailSent ) entry.mailSent = true ; 
+            
+            booking[ind].mailSent = "true"   
+          }
+        }
+
+        // return ; 
         localStorage.setItem("usersBooked" , JSON.stringify( usersBooked ) ) ; 
-        setUserDeatils( usersBooked )
+
+        localStorage.setItem("booking" , JSON.stringify( booking ) ) ; 
+        // setUserDeatils( usersBooked )
     }
     
     function getTimings(){
@@ -241,4 +267,4 @@ const page = () => {
   )
 }
 
-export default page
+export default MyPage
