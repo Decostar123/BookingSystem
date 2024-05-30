@@ -1,0 +1,44 @@
+.outer{
+        
+    display : flex ; 
+    justify-content: center;
+    width : 90% ; 
+    margin-left: 5%;
+}
+
+.inner{
+    width : 40vw ;
+    /* display: flex; */
+    margin-top : 10px ;
+    display: flex;
+   
+    
+}
+.inner input{
+   transform: scale(1.5);
+}
+.inner div{
+    margin-left : 20px ; 
+}
+.outer{
+    margin-top : 20px ;
+    border-top: 2px solid gray  ;
+   
+}
+.personDetail{
+    padding-top : 10px ; 
+}
+.personDetail p{
+    margin-bottom : 5px; 
+
+}
+.cancelTicketbutton{
+    background-color: rgb(233, 82, 82); 
+    color: white;
+    border: 0;
+    outline: 0;
+    margin-top : 20px ; 
+    font-size : 15px ; 
+    padding : 10px ; 
+    cursor : pointer; 
+}

@@ -1,0 +1,14 @@
+.error{
+    background-color: grey;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    /* padding-top: 10px; */
+   padding-bottom: 10px;
+}
+.crossIcon{
+    margin-left: 40px; 
+    padding-top: 10px;
+    cursor: pointer;
+    /* margin-top: 20px;   */
+}

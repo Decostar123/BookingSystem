@@ -1,0 +1,34 @@
+.outer{
+    /* background-color: red ; */
+    /* padding : 10px ; */
+}
+.travelDetail{
+    width : 95vw ; 
+  
+    border-bottom: 1px solid rgb(175, 174, 174) ; 
+    margin-top : 50px ; 
+    padding :10px ;
+    margin-left: 2vw;
+}
+.cityName{
+    font-weight: bold;
+    color : black ; 
+}
+
+.options{
+    display : flex ; 
+    
+    /* width : 80vw ;  */
+    margin-left: 10vw;
+    margin-top: 20px;
+    padding : 10px ; 
+    /* background-color: red ; */
+}
+.options p{
+    color : gray ; 
+    width : 10vw ; 
+}
+.busName{
+   
+    width : 15vw !important ; 
+}

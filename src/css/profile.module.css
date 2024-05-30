@@ -1,0 +1,50 @@
+
+.secondDiv{
+    display : flex ; 
+    align-items: center;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-right: 10vw;
+
+}
+.secondDiv p{
+    font-size : 20px ;
+    margin-left: 10px;
+}
+.secondDiv:hover{
+    background-color: rgb(212, 209, 209);
+}
+
+.options{
+    position: absolute;
+    right : 10vw ; 
+    top : 12vh ; 
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+   
+    border-radius: 12px ;
+    padding : 10px 0 ; 
+    z-index : 800 ; 
+}
+.options p{
+    color : gray  ;
+    cursor: pointer;
+    font-weight: 500;   
+    padding : 15px ; 
+    /* border-bottom: 0 ; */
+   
+    
+}
+.link{
+    text-decoration: none ;
+}
+
+
+.options p:hover{
+    background-color: rgb(235, 232, 232);
+
+}

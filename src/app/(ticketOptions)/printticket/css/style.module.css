@@ -1,0 +1,86 @@
+.firstp{
+text-align: center;
+margin-top: 5vh;
+font-size: 40px ;
+color: #3f3f3f ; 
+
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+font-style: normal;
+
+}
+.secondp{
+    margin-top: 5vh ;
+    text-align: center;  
+    font-size: 25px ; 
+    font-weight: 300;
+}
+
+.options{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    width : 60vw ; 
+    margin-left: 20vw;
+    position: relative;
+    /* width : 80vw ;  */
+
+}
+.options div{
+   
+
+}
+.optionsDiv{
+    width : 30% ;
+    display: flex;
+    flex-direction: column;
+
+}
+.divinput{
+    height  : 5vh  ; 
+    /* outline: 0 ; */
+    border : 2px solid  rgb(220, 219, 219)  ;
+    margin-top: 5px ;
+    padding : 5px ;
+    font-size: 16px;
+    color : gray ; 
+}
+.secondOptionsDiv{
+    display: flex;
+    width : 30% ;
+  
+    flex-direction: column;
+    position: relative ; 
+    
+}
+.secondOptionsDiv div{
+    display: flex; 
+    width : 25% ; 
+
+}
+.showtickteButton{
+    background-color: rgb(233, 82, 82); 
+    color: white;
+    border: 0;
+    outline: 0;
+    height : 50px;
+    padding: 10px; 
+    margin-top: 10px;
+    position: absolute;
+    right : -20px ; 
+    width : 100px ; 
+    cursor : pointer ; 
+    /* border-radius: 12px; */
+
+    /* padding: 20px; */
+   
+}
+
+.mainContainer{
+
+    /* position: relative; */
+    margin-top: 0 ;
+    /* background-color: red; */
+}
+
+

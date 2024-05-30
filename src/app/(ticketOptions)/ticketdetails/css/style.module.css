@@ -1,0 +1,46 @@
+.outer{
+
+    display: grid;
+    /* justify-content: center; */
+    margin-left: 35% ;
+}
+.inner{
+    margin-top: 10vh;
+    width  : 60% ; 
+    display: grid;
+    grid-template-columns: repeat(2 , 50%);
+    row-gap: 15px;
+}
+.inner p{
+    /* text-align: center; */
+    font-size: 30px;
+    overflow: hidden;
+    padding: 5px;
+    
+
+}
+.leftp{
+    color: rgb(233, 82, 82); 
+    text-align: left;
+    /* border-bottom: 2px  solid gray ; */
+    
+}
+
+.rightp{
+    color : rgb(122, 120, 120)   ;
+    text-align: right;
+    /* border-bottom: 2px  solid gray ; */
+}
+.inner button{
+    background-color:  rgb(233, 82, 82);  
+    border: 0 ;
+    outline : 0 ; 
+    color : white; 
+    margin-top:10px ;
+    width : 50%; 
+    height : 50px ; 
+    font-size: 18px;
+    /* padding : 10px ; */
+    border-radius: 12px;
+    cursor: pointer;
+}

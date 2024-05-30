@@ -1,0 +1,66 @@
+.outerForm{
+    position: absolute; 
+  
+    width : 100vw ;
+    height : 100vh ; 
+    background-color: black;
+    opacity: 0.4;
+    top : 0 ; 
+    left : 0 ; 
+    z-index : 2000 ; 
+   
+    /* overflow: hidden; */
+}
+.box{
+    position: absolute;
+    z-index : 5000  ;
+    top :0 ; 
+    display: flex;
+    top : 40vh ; 
+    left  :40vw; 
+    /* padding : 50px ;  */
+    /* background-color: aqua; */
+}
+.innerForm{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    gap : 20px ; 
+    padding: 20px ; 
+    border-radius: 12px;
+    
+    
+   
+    opacity: 1;
+    
+}
+
+.formInput{
+    height : 20px ;
+    border : 2px solid black ; 
+    color : black; 
+    outline : 0 ; 
+    padding :10px ; 
+    border-radius: 12px;
+   font-size: 20px;
+   font-weight: 400;
+   width : 300px ; 
+   /* color : red  ; */
+    
+}
+.formInput::placeholder{
+    color: black;
+    /* color : red ;  */
+}
+.innerForm button{
+     background-color: rgb(233, 82, 82);
+     color: white;
+     border: 0;
+     outline: 0;
+     height : 50px;
+     padding: 10px; 
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 12px;
+}

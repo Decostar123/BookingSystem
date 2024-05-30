@@ -1,0 +1,121 @@
+.outer{
+  background-color: rgb(233, 226, 226) ;
+  height :85vh  ; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index : 100 ;
+
+
+}
+
+.inner{
+
+    width : 50vw ; 
+    /* margin-left: 25vw;
+    margin-top : 20vh ;  */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding : 40px 30px ; 
+    border-radius: 12px ;
+    z-index : 400 ; 
+    background-color: white;
+}
+.userdet1{
+display: flex;
+justify-content: space-between;
+}
+.userdet1 label{
+    font-weight: 200;
+    font-size: 15px;
+}
+.userdet1 input{
+    font-size : 18px ; 
+}
+.userleft{
+    display: flex;
+    flex-direction: column;
+    gap : 10px ; 
+}
+
+.userright{
+    display: flex;
+    flex-direction: column;
+    gap : 10px ; 
+}
+.userright input{
+    /* color : gray  ;  */
+}
+.inputStyle{
+
+    border :0 ; 
+    border-bottom: 1px solid gray ;
+    outline :0 ; 
+    padding : 2px; 
+    
+}
+.dateStyle{
+    padding : 5px ;
+}
+
+.userdet2{
+    margin-top: 20px ;
+    margin-bottom: 10px;
+}
+
+.genderLabel{
+    color : gray ; 
+    margin-left : 5px ; 
+    margin-right : 20px ; 
+    font-size: 20px;
+  
+  
+}
+.genderDiv{
+    margin-bottom: 5px;
+}
+.gender{
+    
+    font-weight: 200;
+    font-size: 15px;
+    margin-bottom: 10px;
+    /* color : red ;  */
+}
+.userdet3{
+    border-top : 2px solid rgb(211, 208, 208) ; 
+    margin-top : 60px ; 
+    padding-top : 15px ;
+}
+.btn{
+    display : flex ; 
+    flex-direction: row-reverse;
+    margin-bottom: 40px;
+}
+.edit{
+    padding : 5px ; 
+    background-color: green;
+    color : white  ;
+    border : 0; 
+    outline  : 0 ; 
+    width  :80px  ; cursor : pointer ; 
+}
+.save{
+    padding : 5px ; 
+    background-color: red;
+    color : white  ;
+    border : 0; 
+    outline  : 0 ; 
+    width  :80px  ; cursor : pointer ; 
+   
+}
+.cancel{
+    padding : 5px ; 
+    background-color: green;
+   background-color: rgb(161, 159, 159);
+    border : 0; 
+    outline  : 0 ; 
+    width  :80px  ; cursor : pointer ; 
+    margin-right : 10px ; 
+}
+.oueter input{
+    color : black ; 
+}

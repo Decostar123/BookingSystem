@@ -1,0 +1,9 @@
+.outer{
+  height : 85vh ; 
+  /* background-color: rgb(233, 82, 82);  */
+  background-image: url("https://st.redbus.in/Images/HomeIndia/HeroImageV2_C.png");
+  display : flex ; 
+  justify-content: center;
+  align-items: center;
+
+}

@@ -1,0 +1,25 @@
+.container{
+    position: sticky;
+    height : 15vh ; 
+    display : flex ;
+    /* justify-content: space-around; */
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    z-index : 1000 ; 
+    /* background-color: red ; */
+}
+
+.firstDiv{
+    display: flex;
+    align-items: center;
+    margin-left: 10vw;
+}
+.firstDiv p{
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 20px;
+}
+.bookText{
+    width: fit-content;
+}

@@ -1,0 +1,97 @@
+.occupied{
+    /* color : red ;  */
+    /* color : gray ; */
+    color : rgb(82, 80, 80) ; 
+}
+.seatBooked{
+    color : red ; 
+}
+.seatNotBooked{
+    color : green ;
+    cursor : pointer; 
+}
+.inner{
+    width : 80% ; 
+    margin-left: 10%;
+}
+.transaction{
+    background-color: #dde1ff;
+    color: #1d1d1d;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 1rem 1rem;
+    width : fit-content; 
+
+}
+.transactionInfo{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8vh;
+}
+
+.seatInfo{
+    display: flex;
+    flex-direction: column;
+    width  : 40%; 
+    color: #1d1d1d;
+
+}
+.seatSymbols{
+    display: flex;
+    align-items: center;
+}
+.seatSymbols p{
+    margin-left : 2% ;
+   margin-right: 15%;
+}
+.seatAvialble{
+    background-color: white ;
+    height:15px ; 
+     width:40px ; 
+     border : 1px solid #a7a9ac;
+}
+.seatNotAvialble{
+    background-color: #cbcbcb  ;
+    height:15px ; 
+     width:40px ; 
+     border : 1px solid #a7a9ac;
+}
+.seat{
+    border : 0 ; 
+   
+}
+.seatLegend{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.outer{
+   width : 75vw;
+   margin-left: 10vw; 
+   /* border : 2px solid red ;  */
+   padding  : 12px ; 
+   background-color: #eeeded;
+
+}
+.sleeper{
+    width : 25vw;
+    background-color: white;
+    padding :  20px ;
+    border-left: 10px solid rgb(79, 77, 77) ;
+}
+.sleeperLeft{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-top : 5vh ; 
+}
+.sleeperRight{
+    display: grid;
+    
+    grid-template-columns: repeat(6, 1fr);
+    /* column-gap: 10px; */
+}
+
+.sleeperName{
+    margin-bottom: 5px ;
+}
