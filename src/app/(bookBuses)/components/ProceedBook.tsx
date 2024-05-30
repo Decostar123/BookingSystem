@@ -54,9 +54,9 @@ const ProceedBook : React.FC<any>= ({fromTime , toTime , setSleeperSeats, sleepe
                 <p className={proceedBookCss.rightSide}>{
                     sleeperSeats.map( ( ele : any , ind : any ) => {
                         if( ind === 0 ){
-                            return <label>{ele}</label>
+                            return <label key={ind}>{ele}</label>
                         }
-                        return <label>, {ele}</label>
+                        return <label key={ind}>, {ele}</label>
                     })
                 }</p>
             </div>
@@ -68,9 +68,9 @@ const ProceedBook : React.FC<any>= ({fromTime , toTime , setSleeperSeats, sleepe
                 <p className={proceedBookCss.rightSide}>{
                      seatingSeats.map( ( ele : any , ind : any ) => {
                         if( ind === 0 ){
-                            return <label>{ele}</label>
+                            return <label key={-ind-1}>{ele}</label>
                         }
-                        return <label>, {ele}</label>
+                        return <label key={-ind-1}>, {ele}</label>
                     })
                 }
                 </p>

@@ -38,7 +38,7 @@ const page = () => {
         } ,[] )
         function getCityList(){
             
-            localStorage.removeItem("route") ;
+            // localStorage.removeItem("route") ;
             let route: any = localStorage.getItem("route") ; 
             if( !route ){
                 route = [{ "fromCityID" : 2 , "toCityID" : 1 , "distance" : 500, id : 1}  ] ; 
@@ -111,9 +111,9 @@ const page = () => {
                 <p>Seats Available</p>
             </div>
             {
-                availableBuses.map( ( ele : any )=>  {
+              availableBuses && availableBuses.length !== 0 &&    availableBuses.map( ( ele : any , ind : any  )=>  {
                     console.log( ele.fromTime , ele.toTime )
-                    return <BusCard routeID={ele.routeID} busID={ele.busID} fromTime={ele.fromTime} toTime={ele.toTime} sleeperPrice={ele.sleeperPrice} 
+                    return <BusCard key={ind} routeID={ele.routeID} busID={ele.busID} fromTime={ele.fromTime} toTime={ele.toTime} sleeperPrice={ele.sleeperPrice} 
                      seatingPrice={ele.seatingPrice} 
                      />
                 })
