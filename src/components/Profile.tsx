@@ -5,25 +5,23 @@ import {CircleUserRound , ChevronDown }  from "lucide-react" ;
 import LoginSignup from './LoginSignup';
 import {useState , useEffect} from "react" ; 
 import Link from 'next/link';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
-const Profile = () => {
+
+const Profile : React.FC<any> = ({addToastMessage}) => {
     const [showOptions, setShowOptions] = useState( false) ; 
     const [showLogin , setShowLogin ] = useState( false ) ; 
     const [ showLoginOptions, setShowLoginOptions] = useState( ""  ) ; 
-    const [ showToastMessage , setShowToastMesssage]= useState("" ) ; 
+    // const [ showToastMessage , setShowToastMesssage]= useState("" ) ; 
 
-    useEffect(()=>{
-      if( !showToastMessage ) return ; 
-              toast.success(showToastMessage) ; 
+   
 
-    } , [showToastMessage])
+   
     useEffect( ()=>{
 
       let loggedInUserID : any = localStorage.getItem("loggedInUserID") ; 
       setShowLoginOptions( loggedInUserID  ) ; 
-    }, [showLogin , showOptions])
+    }, [showLogin , showOptions]) 
+
     function toggleShowOptions(){
         setShowOptions( prev => !prev ) ; 
     }
@@ -56,8 +54,10 @@ const Profile = () => {
       
     
       // window.open("/" , "_self") ;
-      setShowToastMesssage("") ; 
-      setShowToastMesssage("Logged Out !! Successfully") ;  
+      let msg : any = "Logged Out !! Successfully" ; 
+      // setShowToastMesssage(()=> new String("")) ; 
+      addToastMessage( msg )
+      // setShowToastMesssage(msg) ;  
     }
 
     
@@ -65,7 +65,7 @@ const Profile = () => {
   return (
     <>
      <div className={profile.secondDiv} onClick={()=>toggleShowOptions()}>
-     <ToastContainer/>
+     
 
         <CircleUserRound /> <p>My Account</p> <ChevronDown  className="navbar.downCursor"/>
         
@@ -99,7 +99,7 @@ const Profile = () => {
         </div>}
 
 
-        { showLogin && <LoginSignup setShowToastMesssage={setShowToastMesssage} setShowLogin={setShowLogin}/>}
+        { showLogin && <LoginSignup addToastMessage={addToastMessage}  setShowLogin={setShowLogin}/>}
         
     </>
   )

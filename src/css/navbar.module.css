@@ -23,3 +23,8 @@
 .bookText{
     width: fit-content;
 }
+@media print{
+    .dontPrint{
+        display: none;
+    }
+  }

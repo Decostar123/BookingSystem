@@ -62,3 +62,8 @@
     font-size: 20px;
     cursor: pointer;
 }
+@media print{
+    .dontPrint{
+        display: none;
+    }
+  }

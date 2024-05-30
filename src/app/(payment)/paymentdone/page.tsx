@@ -3,6 +3,7 @@ import React , { useEffect , useState } from 'react'
 import payment from "./css/payment.module.css" ; 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import emailjs from '@emailjs/browser';
 
 type UserDetails = {
     [key : string ] : any
@@ -13,6 +14,11 @@ const page = () => {
     const [toCity , setToCity ] = useState("") ; 
     const [fromTime ,  setFromTime] = useState("") ; 
     const [toTime ,  setToTime] = useState("") ; 
+    useEffect(()=>{
+        if( !userDetails || userDetails.length=== 0 ) return ; 
+        if( userDetails[0].mailSent ) return ; 
+        sendMail() ; 
+    } , [userDetails] )
     useEffect(()=>{
         let usersBooked : any  = localStorage.getItem("usersBooked") ; 
         usersBooked = JSON.parse( usersBooked) ; 
@@ -26,9 +32,69 @@ const page = () => {
         if( !city) city = "" ; 
         setToCity( city ) ;
         getTimings()  ;  
+
+         
         // toast.success("Booking Done. Ticket Deatils Sent to Regesitered mail ") ; 
 
     }  , [] ) ; 
+
+    function sendMail(){
+        return ; 
+        // alert("Mail has been sent ! Successfully ")  ; 
+        let mailmsg : any = `
+                             Date : ${getProperDate( userDetails[0]?.date) }\n
+                             Ticket Number : ${userDetails[0]?.ticketID} \n
+                             Bus Number : ${userDetails[0].busID} \n
+                             From : ${getRouteCity( userDetails[0].routeID , true )}\n
+                             To : ${getRouteCity( userDetails[0].routeID , false  )}\n
+                             Total Seats : ${userDetails.length}\n
+                             ${userDetails.map((ele : any) =>{
+                                return `${ele.name.split(" ").reduce(( acc : any , val : any )=>{ 
+                                    return acc +  val.charAt(0).toUpperCase() + ""  + val.slice(1).toLowerCase() + " "
+                                  } , "" ) } : ${ele.seatType}, ${ele.seatNo}\n
+                             `
+                             })}
+                             Total Fare : ${getToatalFarePrice( userDetails[0].routeID , userDetails[0].busID )}` ; 
+                             
+
+
+                             mailmsg =  mailmsg.replace(/,/g, '');
+                             console.log( mailmsg ) ; 
+
+                             let receiverEmail :any  = 'decostarsharma113@gmail.com'; 
+
+        
+
+                             emailjs
+                             .send('service_ho0ji3k', 'template_0ddffiv',  {
+                               to_email: receiverEmail ,
+                              
+                               message:  mailmsg ,
+                             }, {
+                               publicKey: 'P9h4aZpSbHIvVur_r',
+                             })
+                             .then(
+                               () => {
+                                alert("Messge sent successfully ") ; 
+
+                                setMailHasBeenSent() ; 
+                               },
+                               (error) => {
+                                console.log( error ) ; 
+                                  alert("Please download the ticket ")
+                               },
+                             );
+    }
+
+    function setMailHasBeenSent(){
+        let usersBooked : any  = localStorage.getItem("usersBooked") ; 
+        usersBooked = JSON.parse( usersBooked) ; 
+        for( let entry of usersBooked ){
+            entry.mailSent = true ; 
+        }
+        localStorage.setItem("usersBooked" , JSON.stringify( usersBooked ) ) ; 
+        setUserDeatils( usersBooked )
+    }
     
     function getTimings(){
         let time : any = localStorage.getItem("fromTime") ; 
@@ -168,8 +234,8 @@ const page = () => {
 
            
         </div>    
-       <div className={payment.download}>
-       <button>Download Ticket</button>
+       <div className={`${payment.download} ${payment.dontPrint}`} >
+       <button onClick={()=>window.print()}>Download Ticket</button>
        </div>
      </div>
   )

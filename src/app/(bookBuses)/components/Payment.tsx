@@ -30,8 +30,12 @@ const Payment : React.FC<any>= ({sleeperSeats , seatingSeats , setDoPayment , ro
     
   } , [] )
   function formSubmitted(e:any){
+
+
     e.preventDefault() ; 
     // alert("form Submitted");
+
+    
      
     let arr : any = userDeatils ; 
 
@@ -48,7 +52,7 @@ const Payment : React.FC<any>= ({sleeperSeats , seatingSeats , setDoPayment , ro
         let age = e.target[inpt].value ; 
         const id = "" + Date.now() + ind ;  
 
-        let obj : any = { name , gender , age , ticketID , routeID , busID , date , id , email, phoneNo  }  ;
+        let obj : any = { name , gender , age , ticketID , routeID , busID , date , id , email, phoneNo , mailSent : false }  ;
        
        
         arr[ind] = { ...arr[ind] , ...obj } ;         

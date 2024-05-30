@@ -1,7 +1,7 @@
 'use client' ;
 import React from 'react'
 import loginsignup from "../css/loginsinup.module.css"
-const LoginSignup  : React.FC<any> = ({setShowLogin , setShowToastMesssage}) => {
+const LoginSignup  : React.FC<any> = ({setShowLogin , setShowToastMesssage , addToastMessage}) => {
   function formSubmitted(e:any){
       e.preventDefault() ; 
       let phone = e.target.phone.value ; 
@@ -36,8 +36,9 @@ const LoginSignup  : React.FC<any> = ({setShowLogin , setShowToastMesssage}) => 
       localStorage.setItem("users"  , JSON.stringify( users ) ) ; 
       localStorage.setItem("loggedInUserID" , JSON.stringify(id) ) ; 
       setShowLogin( false ) ; 
-      setShowToastMesssage("") ; 
-      setShowToastMesssage("Logged In !! Successfully") ; 
+      addToastMessage( "Logged In !! Successfully")
+      // setShowToastMesssage("Logged In !! Successfully") ; 
+      // setShowToastMesssage("") ; 
       
   }
   function checkDuplicate( userObj  :any ){
