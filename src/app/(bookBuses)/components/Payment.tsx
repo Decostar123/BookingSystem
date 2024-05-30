@@ -130,7 +130,7 @@ const Payment : React.FC<any>= ({sleeperSeats , seatingSeats , setDoPayment , ro
             userDeatils.map(
                ( ele : any , ind : any )=> {
 
-                return  <div className={payment.psngrCard}>
+                return  <div key={ind} className={payment.psngrCard}>
                 <p><label className={payment.psngrName}>Passenger {ind+1} </label>| <label>{ele.type} { ele.seatNo}</label></p>
                 <div className={payment.psngrNameText}>
                   <p>Name</p>

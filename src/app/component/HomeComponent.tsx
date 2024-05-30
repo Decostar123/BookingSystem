@@ -125,7 +125,7 @@ const HomeComponent = () => {
     </div>
     { fromCityList.length !== 0 && <div className={home.cityName}>
       {
-        fromCityList.map( ( ele : any ) => <p onClick={()=> confirmFromCity(ele)} >{ele.name}</p>)
+        fromCityList.map( ( ele : any , ind : any ) => <p  key={ind} onClick={()=> confirmFromCity(ele)} >{ele.name}</p>)
       }
     
       
@@ -144,7 +144,7 @@ const HomeComponent = () => {
     </div>
     { toCityList.length !== 0 && <div className={home.cityName}>
       {
-        toCityList.map( ( ele : any ) => <p onClick={()=> confirmToCity(ele)} >{ele.name}</p>)
+        toCityList.map( ( ele : any , ind : any ) => <p key={ind} onClick={()=> confirmToCity(ele)} >{ele.name}</p>)
       }
     
       
