@@ -64,7 +64,7 @@ const Profile : React.FC<any> = ({addToastMessage}) => {
     
   return (
     <>
-     <div className={profile.secondDiv} onClick={()=>toggleShowOptions()}>
+     <div className={`${profile.secondDiv} ${profile.dontPrint}`} onClick={()=>toggleShowOptions()}>
      
 
         <CircleUserRound /> <p>My Account</p> <ChevronDown  className="navbar.downCursor"/>

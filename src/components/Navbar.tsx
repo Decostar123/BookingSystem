@@ -14,7 +14,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className={`${navbar.container} ${navbar.dontPrint}`} >
+    <div className={`${navbar.container} `} >
        <div className={navbar.firstDiv}>
        <Link href="/">
         <Image src="https://seeklogo.com/images/R/redbus-logo-13648C0E43-seeklogo.com.png" alt='Red Bus Image' width="90" height="60"></Image>

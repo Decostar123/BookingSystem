@@ -26,13 +26,8 @@ const MyPage = () => {
         usersBooked = JSON.parse( usersBooked) ; 
         setUserDeatils( usersBooked  ) ; 
 
-        let city : any = localStorage.getItem("fromCity") ; 
-        if( !city )  city = "" ; 
-        setFromCity( city )  ; 
+       
 
-        city = localStorage.getItem("toCity")  ; 
-        if( !city) city = "" ; 
-        setToCity( city ) ;
         getTimings()  ;  
 
          
