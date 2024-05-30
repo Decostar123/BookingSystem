@@ -3,7 +3,7 @@ import React ,{useState} from 'react'
 import style from "./css/style.module.css" ; 
 import ErrorMessage from '../components/ErrorMessage';
 import PassengeList from './components/PassengeList';
-const page = () => {
+const Page = () => {
 
     const [ deleteUsers , setDeleteUsers ] = useState([]) ; 
     function formSubmitted(e : any){
@@ -101,4 +101,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

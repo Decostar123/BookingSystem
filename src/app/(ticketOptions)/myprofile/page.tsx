@@ -10,7 +10,7 @@ interface UserDetail {
     [key: string]: any; // Allow any other dynamic properties
 }
 
-const page = () => {
+const Page = () => {
     
     const [disbleInput , setDisableInput]  = useState( true  ) ; 
     const [ todayDate , setTodayDate] = useState("") ;
@@ -183,4 +183,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

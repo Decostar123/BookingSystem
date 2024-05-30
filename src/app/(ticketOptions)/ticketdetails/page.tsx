@@ -1,6 +1,6 @@
 import React from 'react'
 import style from "./css/style.module.css"
-const page = () => {
+const Page = () => {
   return (
     <div className={style.outer} >
 
@@ -35,4 +35,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

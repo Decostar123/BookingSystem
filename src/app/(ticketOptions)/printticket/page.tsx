@@ -4,7 +4,7 @@ import style from "./css/style.module.css" ;
 import { CircleX } from "lucide-react"; 
 import ErrorMessage from '../components/ErrorMessage';
 
-const page = () => {
+const Page = () => {
 
     const [ showError , setShowError] = useState( false   ) ;
     const [errorMsg  , setErrorMsg] = useState("") ;  
@@ -112,4 +112,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
