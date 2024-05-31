@@ -3,8 +3,7 @@ import React , {useState , useEffect} from 'react' ;
 import style from "./css/style.module.css" ; 
 import { CircleX } from "lucide-react"; 
 import ErrorMessage from '../components/ErrorMessage';
-import MyTickets from "./components/MyTickets"   ; 
-
+import MyTickets from "../printticket/components/MyTickets" ; 
 const Page = () => {
 
     const [phoneNo , settPhoneNo] = useState("") ; 
@@ -96,10 +95,11 @@ const Page = () => {
             return ; 
         }
         
-        console.log( userArr) ; 
+         
 
         // setRoutingParameters(userArr) ;
         setAllTickets( userArr) ;  
+        
 
         // window.open("/paymentdone" , "_self") ; 
     }
@@ -155,7 +155,7 @@ const Page = () => {
 
 
         {
-            allTickets.map(( ele : any , ind : any )=>   <MyTickets key={ind} ticketID={ele}/>)
+            allTickets.map(( ele : any , ind : any )=>   <MyTickets key={ind} ticketID={ele} showButton={true}/>)
         }
       
         

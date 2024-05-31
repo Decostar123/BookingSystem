@@ -2,9 +2,7 @@
 import React , {useState , useEffect} from 'react'
 import myticket from "../css/myticket.module.css"
 
-const MyTickets :React.FC<any> = ({ticketID}) => {
-
-  
+const MyTickets :React.FC<any> = ({ticketID, showButton}) => {
 
   
   const [fromCity , setFromCity] = useState("") ; 
@@ -95,7 +93,7 @@ const MyTickets :React.FC<any> = ({ticketID}) => {
         <p>To :  {toCity}</p>
       </div>
       </div>
-      <button onClick={viewTheTicket}>VIEW TICKET</button>
+      <button  style={{ visibility : showButton ? 'visible' : 'hidden' }}onClick={viewTheTicket}>VIEW TICKET</button>
       
     </div>
   )

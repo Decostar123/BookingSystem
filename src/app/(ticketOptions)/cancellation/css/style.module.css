@@ -104,3 +104,13 @@
 
 
 }
+
+.carousel{
+    position: relative;
+}
+.arrow{
+    position: absolute;
+    top : 3vh ;
+    left:80vw; 
+    cursor  : pointer  ;
+}
