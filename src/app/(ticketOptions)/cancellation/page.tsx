@@ -172,7 +172,7 @@ const Page = () => {
                 
 
                 
-                <input name="phone"  value={phoneNo} onChange={(e:any)=> ( e.target.value)} className={style.divinput} placeholder='Enter your Phone Nummber' type='number' required />
+                <input name="phone"  value={phoneNo} onChange={(e:any)=> setPhoneNo( e.target.value)} className={style.divinput} placeholder='Enter your Phone Nummber' type='number' required />
                
 
             </div>
