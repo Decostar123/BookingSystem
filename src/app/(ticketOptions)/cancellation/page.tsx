@@ -184,8 +184,8 @@ const Page = () => {
         </form>
         <div style={{paddingBottom:"50px"}}>
         {
-            allTickets.map(( ele : any , ind : any )=>   <div className={style.carousel}>
-                <MyTickets key={ind} ticketID={ele} showButton={false}  />
+            allTickets.map(( ele : any , ind : any )=>   <div key={ind} className={style.carousel}>
+                <MyTickets ticketID={ele} showButton={false}  />
                 {
                     deleteTicketID === ele &&  <PersonDetail deleteTicketID={deleteTicketID} getTicketDetils={getTicketDetils} 
                     updateDeleteUsers={updateDeleteUsers}/>
