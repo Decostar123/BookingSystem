@@ -185,7 +185,7 @@ const Page = () => {
         <div style={{paddingBottom:"50px"}}>
         {
             allTickets.map(( ele : any , ind : any )=>   <div key={ind} className={style.carousel}>
-                <MyTickets ticketID={ele} showButton={false}  />
+                <MyTickets key={-ind -1 } ticketID={ele} showButton={false}  />
                 {
                     deleteTicketID === ele &&  <PersonDetail deleteTicketID={deleteTicketID} getTicketDetils={getTicketDetils} 
                     updateDeleteUsers={updateDeleteUsers}/>

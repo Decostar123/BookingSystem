@@ -10,16 +10,16 @@ const PassengeList : React.FC<any> = ({deleteUsers}) => {
 
         <form onSubmit={(e)=>formSubmitted(e)}>
             {
-                deleteUsers.map( ( ele : any ) =>{
+                deleteUsers.map( ( ele : any , ind : any  ) =>{
                     return   <>
-                        <div className={passengerList.inner}>
+                        <div className={passengerList.inner} key={ind}>
                             <input type="checkbox"  name={ele.id} id={ele.id} />
                             <div className={passengerList.personDetail} >
                                 <p >Arjun</p>
                                 <p>{ele.gender}, {ele.age}years</p>
                             </div>
                     </div>
-                    <div className={passengerList.inner}>
+                    <div className={passengerList.inner} key={-ind-1}>
                         <input type="checkbox" />
                         <div className={passengerList.personDetail}>
                             <label htmlFor={ele.id}>Arjun</label>

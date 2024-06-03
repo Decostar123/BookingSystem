@@ -97,7 +97,7 @@ const PersonDetail : React.FC<any> = ({deleteTicketID , getTicketDetils , update
     <form onSubmit={(e:any) =>formSubmitted(e) } >
         {
             userArr.map(( ele : any , ind : any  )=>{
-                return <div className={personDelete.outer} onSubmit={(e:any)=>formSubmitted(e)}>
+                return <div key={ind} className={personDelete.outer} onSubmit={(e:any)=>formSubmitted(e)}>
                     <input type="checkbox" checked={ele.checked} onChange={(e:any)=> { 
                         userArr[ind].checked = e.checked  ;
                         setUserArray( [...userArr] ) 
